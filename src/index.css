@@ -1,0 +1,125 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-cream: #f7f0e3;
+  --color-olive: #8b9456;
+  --color-olive-dark: #7a8448;
+  --color-mustard: #d4b86a;
+  --color-dusty-pink: #e8b4b8;
+  --color-burgundy: #6b2e2e;
+  --color-lavender: #c5b4d4;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-script: 'Allura', cursive;
+  --font-instrument: 'Instrument Serif', Georgia, serif;
+  --font-public: 'Public Sans', system-ui, sans-serif;
+  --font-sans: 'Karla', system-ui, sans-serif;
+
+  --animate-wiggle: wiggle 0.6s ease-in-out;
+  --animate-fade-slide: fade-slide 0.5s ease-out;
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-1.2deg) scale(1.005);
+  }
+  40% {
+    transform: rotate(1deg);
+  }
+  60% {
+    transform: rotate(-0.8deg);
+  }
+  80% {
+    transform: rotate(0.6deg);
+  }
+}
+
+@keyframes fade-slide {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  font-family: var(--font-sans);
+  color: var(--color-burgundy);
+  background-color: var(--color-olive);
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(247, 240, 227, 0.22) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(247, 240, 227, 0.22) 1px,
+      transparent 1px
+    );
+  background-size: 28px 28px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.font-instrument {
+  font-family: var(--font-instrument);
+}
+
+.font-public {
+  font-family: var(--font-public);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.animate-wiggle {
+  animation: wiggle 0.6s ease-in-out;
+}
+
+.animate-fade-slide {
+  animation: fade-slide 0.5s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
