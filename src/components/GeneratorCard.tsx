@@ -73,7 +73,7 @@ function PromptLine({
 
   return (
     <div
-      className={`flex items-center gap-4 rounded-2xl border-2 px-4 py-4 sm:px-6 sm:py-5 ${
+      className={`flex items-center gap-3 rounded-2xl border-2 px-3 py-3 sm:gap-4 sm:px-6 sm:py-5 ${
         locked
           ? 'border-dusty-pink/60 bg-dusty-pink/20'
           : 'border-burgundy/15 bg-cream/40'
@@ -94,7 +94,7 @@ function PromptLine({
       </button>
 
       <p
-        className="font-display text-burgundy flex-1 text-center text-2xl leading-snug sm:text-3xl"
+        className="font-display text-burgundy flex-1 text-center text-lg leading-snug sm:text-3xl"
         aria-label={text}
       >
         {displayedText}
@@ -149,7 +149,7 @@ export function GeneratorCard({
   return (
     <section id="generator" className="relative px-4 pb-20 sm:px-6">
       <ScallopedCard>
-        <p className="font-instrument text-burgundy/90 mb-8 text-center text-[32px] italic">
+        <p className="font-instrument text-burgundy/90 mb-6 text-center text-[20px] italic sm:mb-8 sm:text-[32px]">
           for your next project...
         </p>
 
@@ -180,11 +180,11 @@ export function GeneratorCard({
           />
         </div>
 
-        <div className="mt-10 flex justify-center">
+        <div className="mt-8 flex justify-center sm:mt-10">
           <button
             type="button"
             onClick={onShuffle}
-            className="font-public rounded-full border border-[#1a1a1a] bg-[#FDDFFF] px-[42px] py-[12px] text-[16px] font-medium text-[#1a1a1a] transition-opacity duration-200 hover:opacity-90"
+            className="font-public rounded-full border border-[#1a1a1a] bg-[#FDDFFF] px-8 py-2.5 text-sm font-medium text-[#1a1a1a] transition-opacity duration-200 hover:opacity-90 sm:px-[42px] sm:py-[12px] sm:text-[16px]"
           >
             Shuffle
           </button>
