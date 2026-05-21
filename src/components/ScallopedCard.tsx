@@ -44,7 +44,7 @@ export function ScallopedCard({ children, className = '' }: ScallopedCardProps) 
           />
         </svg>
 
-        <div className="relative px-8 py-14 sm:px-14 sm:py-16">{children}</div>
+        <div className="relative px-8 py-9 sm:px-14 sm:py-11">{children}</div>
 
         <svg
           className="text-cream absolute right-0 -bottom-px left-0 h-5 w-full"
